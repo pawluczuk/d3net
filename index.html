@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>D3net by pawluczuk</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>D3net</h1>
+        <p>Framework for creating Shiny applications for network visualization using d3js</p>
+
+        <p class="view"><a href="https://github.com/pawluczuk/d3net">View the Project on GitHub <small>pawluczuk/d3net</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/pawluczuk/d3net/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/pawluczuk/d3net/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/pawluczuk/d3net">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="d3net" class="anchor" href="#d3net" aria-hidden="true"><span class="octicon octicon-link"></span></a>d3net</h1>
+
+<p>Framework for creating Shiny applications for network visualization using D3.js JavaScript library.</p>
+
+<h2>
+<a id="updating-to-the-latest-version-of-d3net" class="anchor" href="#updating-to-the-latest-version-of-d3net" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating to the latest version of d3net</h2>
+
+<p>You can download <code>d3net</code> package at <a href="https://github.com/mbojan/d3net">https://github.com/mbojan/d3net</a>. To install it:</p>
+
+<ol>
+<li><p>Install the release version of <code>devtools</code> from CRAN with <code>install.packages("devtools")</code>.</p></li>
+<li>
+<p>Follow the instructions below depending on platform.</p>
+
+<ul>
+<li>
+<p><strong>Mac and Linux</strong>:</p>
+
+<div class="highlight highlight-R"><pre><span class="pl-e">devtools</span><span class="pl-k">::</span>install_github(<span class="pl-s"><span class="pl-pds">"</span>mbojan/d3net<span class="pl-pds">"</span></span>)</pre></div>
+</li>
+<li>
+<p><strong>Windows</strong>:</p>
+
+<div class="highlight highlight-R"><pre>library(<span class="pl-smi">devtools</span>)
+build_github_devtools()
+
+<span class="pl-c">#### Restart R before continuing ####</span>
+install.packages(<span class="pl-s"><span class="pl-pds">"</span>d3net.zip<span class="pl-pds">"</span></span>, <span class="pl-v">repos</span> <span class="pl-k">=</span> <span class="pl-c1">NULL</span>)
+
+<span class="pl-c"># Remove the package after installation</span>
+unlink(<span class="pl-s"><span class="pl-pds">"</span>d3net.zip<span class="pl-pds">"</span></span>)</pre></div>
+</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="package-functions" class="anchor" href="#package-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Package functions</h2>
+
+<p>Currently methods are implemented for objects of class "igraph", "network" and "networkDynamic".</p>
+
+<p>To launch application:</p>
+
+<div class="highlight highlight-R"><pre>library(<span class="pl-smi">d3net</span>)
+d3net(<span class="pl-smi">dataset</span>)</pre></div>
+
+<p>where <code>dataset</code> is R igraph, network or networkDynamic object</p>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p>To launch examples, use the example datasets provided for each object type.</p>
+
+<p>igraph</p>
+
+<div class="highlight highlight-R"><pre>library(<span class="pl-smi">igraphdata</span>)
+data(<span class="pl-smi">karate</span>)
+d3net(<span class="pl-smi">karate</span>)</pre></div>
+
+<hr>
+
+<p>network</p>
+
+<div class="highlight highlight-R"><pre>library(<span class="pl-smi">network</span>)
+data(<span class="pl-smi">flo</span>)
+<span class="pl-c">#create network object from sample data</span>
+<span class="pl-smi">nflo</span> <span class="pl-k">&lt;-</span> network(<span class="pl-smi">flo</span>, <span class="pl-v">directed</span> <span class="pl-k">=</span> <span class="pl-c1">FALSE</span>)
+d3net(<span class="pl-smi">nflo</span>)</pre></div>
+
+<hr>
+
+<p>networkDynamic</p>
+
+<div class="highlight highlight-R"><pre>library(<span class="pl-smi">networkDynamicData</span>)
+data(<span class="pl-smi">harry_potter_support</span>)
+d3net(<span class="pl-smi">harry_potter_support</span>)</pre></div>
+
+<h2>
+<a id="see-also" class="anchor" href="#see-also" aria-hidden="true"><span class="octicon octicon-link"></span></a>See also</h2>
+
+<ul>
+<li><a href="www.d3js.org">D3.js library</a></li>
+<li><a href="www.shiny.rstudio.com">Shiny framework</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/pawluczuk">pawluczuk</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
